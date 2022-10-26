@@ -16,6 +16,13 @@ db.on("error", (err) => console.log(err.message + " mongo ain't workin"))
 db.on('connected', () => console.log("mongo connected"))
 db.on('disconnected', () => console.log('mongo disconnected'))
 
+//MIDLEWARE
+
+
+//!Create
+app.post('/keyboards', (req, res)=> {
+    res.send("Welcome to keyboards")
+})
 
 //!listener
 const PORT = process.env.PORT

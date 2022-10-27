@@ -5,6 +5,7 @@ const mongoose = require('mongoose')
 require("dotenv").config()
 
 
+
 //!Database Connect
 mongoose.connect(process.env.DATABASE_URL, {
     useNewUrlParser: true,
@@ -20,7 +21,7 @@ db.on('disconnected', () => console.log('mongo disconnected'))
 app.use(express.urlencoded({extended: true}))
 
 //!Create
-app.post('/keyboards', (req, res)=> {
+app.post("/keys", (req, res)=> {
     res.send("Welcome to keyboards")
 })
 

@@ -17,7 +17,7 @@ db.on('connected', () => console.log("mongo connected"))
 db.on('disconnected', () => console.log('mongo disconnected'))
 
 //MIDLEWARE
-
+app.use(express.urlencoded({extended: true}))
 
 //!Create
 app.post('/keyboards', (req, res)=> {

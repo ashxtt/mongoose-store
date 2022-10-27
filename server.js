@@ -22,7 +22,7 @@ app.use(express.urlencoded({extended: true}))
 
 //!Create
 app.post("/keys", (req, res)=> {
-    res.send("Welcome to keyboards")
+    res.send(req.body)
 })
 
 //!listener
